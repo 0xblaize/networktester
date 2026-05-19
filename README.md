@@ -60,12 +60,12 @@ The results are then displayed inside the app through a visual speedometer-style
 
 Download or open the executable file:
 
-```bash
+
 NetworkTester.exe
 
 
 
-Double-click the file to launch the app.
+# Double-click the file to launch the app.
 
 
 Option 2: Run from Source
