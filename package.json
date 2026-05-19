@@ -1,0 +1,40 @@
+{
+  "name": "network-tester",
+  "version": "1.0.0",
+  "description": "Native desktop internet speed tester",
+  "main": "src/desktop/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "node node_modules/electron-builder/cli.js --win nsis",
+    "build:portable": "node node_modules/electron-builder/cli.js --win portable"
+  },
+  "build": {
+    "appId": "com.local.networktester",
+    "productName": "Network Tester",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "public/**/*",
+      "src/desktop/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12"
+  }
+}

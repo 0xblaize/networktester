@@ -1,0 +1,350 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.14.1
+2 info using node@v24.14.1
+3 silly config load:file:C:\Users\USER\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\USER\network tester\.npmrc
+5 silly config load:file:C:\Users\USER\.npmrc
+6 silly config load:file:C:\Users\USER\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\USER\network tester\.npm-cache\_logs\2026-05-19T13_39_48_394Z-
+10 verbose logfile C:\Users\USER\network tester\.npm-cache\_logs\2026-05-19T13_39_48_394Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly fetch manifest dmg-license@^1.0.11
+15 silly packumentCache full:https://registry.npmjs.org/dmg-license cache-miss
+16 http fetch GET https://registry.npmjs.org/dmg-license attempt 1 failed with ETIMEDOUT
+17 http fetch GET 200 https://registry.npmjs.org/dmg-license 31906ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/dmg-license set size:66560 disposed:false
+19 silly placeDep ROOT dmg-license@1.0.11 OK for: dmg-builder@26.8.1 want: ^1.0.11
+20 silly fetch manifest @types/plist@^3.0.1
+21 silly packumentCache full:https://registry.npmjs.org/@types%2fplist cache-miss
+22 silly fetch manifest @types/verror@^1.10.3
+23 silly packumentCache full:https://registry.npmjs.org/@types%2fverror cache-miss
+24 silly fetch manifest crc@^3.8.0
+25 silly packumentCache full:https://registry.npmjs.org/crc cache-miss
+26 http fetch GET 200 https://registry.npmjs.org/crc 198ms (cache revalidated)
+27 silly packumentCache full:https://registry.npmjs.org/crc set size:82778 disposed:false
+28 silly fetch manifest iconv-corefoundation@^1.1.7
+29 silly packumentCache full:https://registry.npmjs.org/iconv-corefoundation cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/iconv-corefoundation 356ms (cache revalidated)
+31 silly packumentCache full:https://registry.npmjs.org/iconv-corefoundation set size:32483 disposed:false
+32 silly fetch manifest smart-buffer@^4.0.2
+33 silly packumentCache full:https://registry.npmjs.org/smart-buffer cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/smart-buffer 184ms (cache revalidated)
+35 silly packumentCache full:https://registry.npmjs.org/smart-buffer set size:87065 disposed:false
+36 silly fetch manifest verror@^1.10.0
+37 silly packumentCache full:https://registry.npmjs.org/verror cache-miss
+38 http fetch GET 200 https://registry.npmjs.org/@types%2fverror 776ms (cache revalidated)
+39 silly packumentCache full:https://registry.npmjs.org/@types%2fverror set size:40803 disposed:false
+40 http fetch GET 200 https://registry.npmjs.org/@types%2fplist 811ms (cache revalidated)
+41 silly packumentCache full:https://registry.npmjs.org/@types%2fplist set size:12495 disposed:false
+42 http fetch GET 200 https://registry.npmjs.org/verror 195ms (cache revalidated)
+43 silly packumentCache full:https://registry.npmjs.org/verror set size:50129 disposed:false
+44 silly placeDep ROOT @types/plist@3.0.5 OK for: dmg-license@1.0.11 want: ^3.0.1
+45 silly placeDep ROOT @types/verror@1.10.11 OK for: dmg-license@1.0.11 want: ^1.10.3
+46 silly placeDep ROOT crc@3.8.0 OK for: dmg-license@1.0.11 want: ^3.8.0
+47 silly placeDep ROOT iconv-corefoundation@1.1.7 OK for: dmg-license@1.0.11 want: ^1.1.7
+48 silly placeDep ROOT smart-buffer@4.2.0 OK for: dmg-license@1.0.11 want: ^4.0.2
+49 silly placeDep ROOT verror@1.10.1 OK for: dmg-license@1.0.11 want: ^1.10.0
+50 silly fetch manifest buffer@^5.1.0
+51 silly packumentCache full:https://registry.npmjs.org/buffer cache-miss
+52 silly fetch manifest cli-truncate@^2.1.0
+53 silly packumentCache full:https://registry.npmjs.org/cli-truncate cache-miss
+54 silly fetch manifest node-addon-api@^1.6.3
+55 silly packumentCache full:https://registry.npmjs.org/node-addon-api cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/node-addon-api 195ms (cache revalidated)
+57 silly packumentCache full:https://registry.npmjs.org/node-addon-api set size:347062 disposed:false
+58 silly fetch manifest extsprintf@^1.2.0
+59 silly packumentCache full:https://registry.npmjs.org/extsprintf cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/buffer 204ms (cache revalidated)
+61 silly packumentCache full:https://registry.npmjs.org/buffer set size:280480 disposed:false
+62 silly fetch manifest assert-plus@^1.0.0
+63 silly packumentCache full:https://registry.npmjs.org/assert-plus cache-miss
+64 http fetch GET 200 https://registry.npmjs.org/cli-truncate 217ms (cache revalidated)
+65 silly packumentCache full:https://registry.npmjs.org/cli-truncate set size:35177 disposed:false
+66 silly fetch manifest core-util-is@1.0.2
+67 silly packumentCache full:https://registry.npmjs.org/core-util-is cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/assert-plus 188ms (cache revalidated)
+69 silly packumentCache full:https://registry.npmjs.org/assert-plus set size:16225 disposed:false
+70 http fetch GET 200 https://registry.npmjs.org/extsprintf 202ms (cache revalidated)
+71 silly packumentCache full:https://registry.npmjs.org/extsprintf set size:16178 disposed:false
+72 http fetch GET 200 https://registry.npmjs.org/core-util-is 204ms (cache revalidated)
+73 silly packumentCache full:https://registry.npmjs.org/core-util-is set size:7163 disposed:false
+74 silly placeDep ROOT buffer@5.7.1 OK for: crc@3.8.0 want: ^5.1.0
+75 silly fetch manifest ieee754@^1.1.13
+76 silly packumentCache full:https://registry.npmjs.org/ieee754 cache-miss
+77 http fetch GET 200 https://registry.npmjs.org/ieee754 184ms (cache revalidated)
+78 silly packumentCache full:https://registry.npmjs.org/ieee754 set size:34910 disposed:false
+79 silly placeDep ROOT ieee754@1.2.1 OK for: buffer@5.7.1 want: ^1.1.13
+80 silly placeDep ROOT cli-truncate@2.1.0 OK for: iconv-corefoundation@1.1.7 want: ^2.1.0
+81 silly placeDep ROOT node-addon-api@1.7.2 OK for: iconv-corefoundation@1.1.7 want: ^1.6.3
+82 silly fetch manifest slice-ansi@^3.0.0
+83 silly packumentCache full:https://registry.npmjs.org/slice-ansi cache-miss
+84 http fetch GET 200 https://registry.npmjs.org/slice-ansi 6263ms (cache revalidated)
+85 silly packumentCache full:https://registry.npmjs.org/slice-ansi set size:36418 disposed:false
+86 silly placeDep ROOT slice-ansi@3.0.0 OK for: cli-truncate@2.1.0 want: ^3.0.0
+87 silly fetch manifest astral-regex@^2.0.0
+88 silly packumentCache full:https://registry.npmjs.org/astral-regex cache-miss
+89 http fetch GET 200 https://registry.npmjs.org/astral-regex 187ms (cache revalidated)
+90 silly packumentCache full:https://registry.npmjs.org/astral-regex set size:5602 disposed:false
+91 silly placeDep ROOT astral-regex@2.0.0 OK for: slice-ansi@3.0.0 want: ^2.0.0
+92 silly placeDep ROOT assert-plus@1.0.0 OK for: verror@1.10.1 want: ^1.0.0
+93 silly placeDep ROOT core-util-is@1.0.2 OK for: verror@1.10.1 want: 1.0.2
+94 silly placeDep ROOT extsprintf@1.4.1 OK for: verror@1.10.1 want: ^1.2.0
+95 silly reify moves {}
+96 silly audit bulk request {
+96 silly audit   '7zip-bin': [ '5.2.0' ],
+96 silly audit   abbrev: [ '4.0.0' ],
+96 silly audit   'agent-base': [ '7.1.4' ],
+96 silly audit   ajv: [ '6.15.0' ],
+96 silly audit   'ajv-keywords': [ '3.5.2' ],
+96 silly audit   'ansi-regex': [ '5.0.1' ],
+96 silly audit   'ansi-styles': [ '4.3.0' ],
+96 silly audit   'app-builder-lib': [ '26.8.1' ],
+96 silly audit   'ci-info': [ '4.3.1', '4.4.0' ],
+96 silly audit   'fs-extra': [ '10.1.0', '8.1.0', '7.0.1', '9.1.0', '11.3.5' ],
+96 silly audit   universalify: [ '2.0.1', '0.1.2' ],
+96 silly audit   jsonfile: [ '6.2.1', '4.0.0' ],
+96 silly audit   semver: [ '7.7.4', '6.3.1', '7.8.0', '5.7.2' ],
+96 silly audit   '@electron/get': [ '3.1.0', '2.0.3' ],
+96 silly audit   argparse: [ '2.0.1' ],
+96 silly audit   async: [ '3.2.6' ],
+96 silly audit   'async-exit-hook': [ '2.0.1' ],
+96 silly audit   asynckit: [ '0.4.0' ],
+96 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+96 silly audit   'at-least-node': [ '1.0.0' ],
+96 silly audit   'base64-js': [ '1.5.1' ],
+96 silly audit   boolean: [ '3.2.0' ],
+96 silly audit   'brace-expansion': [ '5.0.6', '1.1.14', '2.1.0' ],
+96 silly audit   'buffer-crc32': [ '0.2.13' ],
+96 silly audit   'buffer-from': [ '1.1.2' ],
+96 silly audit   'builder-util': [ '26.8.1' ],
+96 silly audit   'app-builder-bin': [ '5.0.0-alpha.12' ],
+96 silly audit   'builder-util-runtime': [ '9.5.1' ],
+96 silly audit   'cacheable-lookup': [ '5.0.4' ],
+96 silly audit   'cacheable-request': [ '7.0.4' ],
+96 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+96 silly audit   chalk: [ '4.1.2' ],
+96 silly audit   chownr: [ '3.0.0' ],
+96 silly audit   cliui: [ '8.0.1' ],
+96 silly audit   'clone-response': [ '1.0.3' ],
+96 silly audit   'color-convert': [ '2.0.1' ],
+96 silly audit   'color-name': [ '1.1.4' ],
+96 silly audit   'chromium-pickle-js': [ '0.2.0' ],
+96 silly audit   'combined-stream': [ '1.0.8' ],
+96 silly audit   commander: [ '5.1.0', '9.5.0' ],
+96 silly audit   'compare-version': [ '0.1.2' ],
+96 silly audit   'concat-map': [ '0.0.1' ],
+96 silly audit   'cross-dirname': [ '0.1.0' ],
+96 silly audit   'cross-spawn': [ '7.0.6' ],
+96 silly audit   isexe: [ '2.0.0', '3.1.5', '4.0.0' ],
+96 silly audit   which: [ '2.0.2', '6.0.1', '5.0.0' ],
+96 silly audit   debug: [ '4.4.3' ],
+96 silly audit   'decompress-response': [ '6.0.0' ],
+96 silly audit   'mimic-response': [ '3.1.0', '1.0.1' ],
+96 silly audit   'defer-to-connect': [ '2.0.1' ],
+96 silly audit   'define-data-property': [ '1.1.4' ],
+96 silly audit   'define-properties': [ '1.2.1' ],
+96 silly audit   'delayed-stream': [ '1.0.0' ],
+96 silly audit   'detect-node': [ '2.1.0' ],
+96 silly audit   'dir-compare': [ '4.2.0' ],
+96 silly audit   minimatch: [ '3.1.5', '5.1.9', '10.2.5', '9.0.9' ],
+96 silly audit   'dmg-builder': [ '26.8.1' ],
+96 silly audit   dotenv: [ '16.6.1' ],
+96 silly audit   'dunder-proto': [ '1.0.1' ],
+96 silly audit   ejs: [ '3.1.10' ],
+96 silly audit   electron: [ '39.8.10' ],
+96 silly audit   'electron-builder': [ '26.8.1' ],
+96 silly audit   'electron-publish': [ '26.8.1' ],
+96 silly audit   'dotenv-expand': [ '11.0.7' ],
+96 silly audit   'electron-winstaller': [ '5.4.0' ],
+96 silly audit   'electron-builder-squirrel-windows': [ '26.8.1' ],
+96 silly audit   'emoji-regex': [ '8.0.0' ],
+96 silly audit   'end-of-stream': [ '1.4.5' ],
+96 silly audit   'env-paths': [ '2.2.1' ],
+96 silly audit   'err-code': [ '2.0.3' ],
+96 silly audit   'es-define-property': [ '1.0.1' ],
+96 silly audit   'es-errors': [ '1.3.0' ],
+96 silly audit   'es-object-atoms': [ '1.1.1' ],
+96 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+96 silly audit   escalade: [ '3.2.0' ],
+96 silly audit   'es6-error': [ '4.1.1' ],
+96 silly audit   'escape-string-regexp': [ '4.0.0' ],
+96 silly audit   'exponential-backoff': [ '3.1.3' ],
+96 silly audit   'extract-zip': [ '2.0.1' ],
+96 silly audit   'fast-deep-equal': [ '3.1.3' ],
+96 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+96 silly audit   'fd-slicer': [ '1.1.0' ],
+96 silly audit   fdir: [ '6.5.0' ],
+96 silly audit   filelist: [ '1.0.6' ],
+96 silly audit   'form-data': [ '4.0.5' ],
+96 silly audit   'fs.realpath': [ '1.0.0' ],
+96 silly audit   'function-bind': [ '1.1.2' ],
+96 silly audit   'get-caller-file': [ '2.0.5' ],
+96 silly audit   'get-intrinsic': [ '1.3.0' ],
+96 silly audit   'get-proto': [ '1.0.1' ],
+96 silly audit   'get-stream': [ '5.2.0' ],
+96 silly audit   glob: [ '7.2.3' ],
+96 silly audit   'global-agent': [ '3.0.0' ],
+96 silly audit   globalthis: [ '1.0.4' ],
+96 silly audit   gopd: [ '1.2.0' ],
+96 silly audit   got: [ '11.8.6' ],
+96 silly audit   'graceful-fs': [ '4.2.11' ],
+96 silly audit   'has-flag': [ '4.0.0' ],
+96 silly audit   'has-property-descriptors': [ '1.0.2' ],
+96 silly audit   'has-symbols': [ '1.1.0' ],
+96 silly audit   'has-tostringtag': [ '1.0.2' ],
+96 silly audit   hasown: [ '2.0.3' ],
+96 silly audit   'hosted-git-info': [ '4.1.0' ],
+96 silly audit   'http-cache-semantics': [ '4.2.0' ],
+96 silly audit   'http-proxy-agent': [ '7.0.2' ],
+96 silly audit   'http2-wrapper': [ '1.0.3' ],
+96 silly audit   'https-proxy-agent': [ '7.0.6' ],
+96 silly audit   'iconv-lite': [ '0.6.3' ],
+96 silly audit   inflight: [ '1.0.6' ],
+96 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+96 silly audit   isbinaryfile: [ '5.0.7', '4.0.10' ],
+96 silly audit   inherits: [ '2.0.4' ],
+96 silly audit   jake: [ '10.9.4' ],
+96 silly audit   'js-yaml': [ '4.1.1' ],
+96 silly audit   jiti: [ '2.7.0' ],
+96 silly audit   'json-buffer': [ '3.0.1' ],
+96 silly audit   'json-schema-traverse': [ '0.4.1' ],
+96 silly audit   'json-stringify-safe': [ '5.0.1' ],
+96 silly audit   json5: [ '2.2.3' ],
+96 silly audit   keyv: [ '4.5.4' ],
+96 silly audit   'lazy-val': [ '1.0.5' ],
+96 silly audit   lodash: [ '4.18.1' ],
+96 silly audit   'lowercase-keys': [ '2.0.0' ],
+96 silly audit   'lru-cache': [ '6.0.0' ],
+96 silly audit   matcher: [ '3.0.0' ],
+96 silly audit   'math-intrinsics': [ '1.1.0' ],
+96 silly audit   mime: [ '2.6.0' ],
+96 silly audit   'mime-types': [ '2.1.35' ],
+96 silly audit   'mime-db': [ '1.52.0' ],
+96 silly audit   minimist: [ '1.2.8' ],
+96 silly audit   minipass: [ '7.1.3' ],
+96 silly audit   minizlib: [ '3.1.0' ],
+96 silly audit   mkdirp: [ '0.5.6' ],
+96 silly audit   ms: [ '2.1.3' ],
+96 silly audit   'node-abi': [ '4.31.0' ],
+96 silly audit   'node-api-version': [ '0.2.1' ],
+96 silly audit   'node-gyp': [ '12.3.0' ],
+96 silly audit   nopt: [ '9.0.0' ],
+96 silly audit   'normalize-url': [ '6.1.0' ],
+96 silly audit   once: [ '1.4.0' ],
+96 silly audit   'p-cancelable': [ '2.1.1' ],
+96 silly audit   'p-limit': [ '3.1.0' ],
+96 silly audit   'path-is-absolute': [ '1.0.1' ],
+96 silly audit   'pe-library': [ '0.4.1' ],
+96 silly audit   'path-key': [ '3.1.1' ],
+96 silly audit   pend: [ '1.2.0' ],
+96 silly audit   picocolors: [ '1.1.1' ],
+96 silly audit   picomatch: [ '4.0.4' ],
+96 silly audit   plist: [ '3.1.0' ],
+96 silly audit   postject: [ '1.0.0-alpha.6' ],
+96 silly audit   'proc-log': [ '6.1.0' ],
+96 silly audit   progress: [ '2.0.3' ],
+96 silly audit   'promise-retry': [ '2.0.1' ],
+96 silly audit   'proper-lockfile': [ '4.1.2' ],
+96 silly audit   pump: [ '3.0.4' ],
+96 silly audit   punycode: [ '2.3.1' ],
+96 silly audit   'read-binary-file-arch': [ '1.0.6' ],
+96 silly audit   'require-directory': [ '2.1.1' ],
+96 silly audit   'quick-lru': [ '5.1.1' ],
+96 silly audit   resedit: [ '1.7.2' ],
+96 silly audit   'resolve-alpn': [ '1.2.1' ],
+96 silly audit   responselike: [ '2.0.1' ],
+96 silly audit   rimraf: [ '2.6.3' ],
+96 silly audit   roarr: [ '2.15.4' ],
+96 silly audit   'safer-buffer': [ '2.1.2' ],
+96 silly audit   'sanitize-filename': [ '1.6.4' ],
+96 silly audit   sax: [ '1.6.0' ],
+96 silly audit   'semver-compare': [ '1.0.0' ],
+96 silly audit   'serialize-error': [ '7.0.1' ],
+96 silly audit   'signal-exit': [ '3.0.7' ],
+96 silly audit   'shebang-regex': [ '3.0.0' ],
+96 silly audit   'simple-update-notifier': [ '2.0.0' ],
+96 silly audit   'source-map': [ '0.6.1' ],
+96 silly audit   'source-map-support': [ '0.5.21' ],
+96 silly audit   'sprintf-js': [ '1.1.3' ],
+96 silly audit   'stat-mode': [ '1.0.0' ],
+96 silly audit   'string-width': [ '4.2.3' ],
+96 silly audit   'strip-ansi': [ '6.0.1' ],
+96 silly audit   sumchecker: [ '3.0.1' ],
+96 silly audit   'supports-color': [ '7.2.0' ],
+96 silly audit   tar: [ '7.5.15' ],
+96 silly audit   yallist: [ '5.0.0', '4.0.0' ],
+96 silly audit   'object-keys': [ '1.1.1' ],
+96 silly audit   temp: [ '0.9.4' ],
+96 silly audit   'temp-file': [ '3.4.0' ],
+96 silly audit   'shebang-command': [ '2.0.0' ],
+96 silly audit   tinyglobby: [ '0.2.16' ],
+96 silly audit   tmp: [ '0.2.5' ],
+96 silly audit   'tmp-promise': [ '3.0.3' ],
+96 silly audit   'truncate-utf8-bytes': [ '1.0.2' ],
+96 silly audit   'type-fest': [ '0.13.1' ],
+96 silly audit   undici: [ '6.25.0' ],
+96 silly audit   'undici-types': [ '6.21.0' ],
+96 silly audit   'uri-js': [ '4.4.1' ],
+96 silly audit   'utf8-byte-length': [ '1.0.5' ],
+96 silly audit   'wrap-ansi': [ '7.0.0' ],
+96 silly audit   wrappy: [ '1.0.2' ],
+96 silly audit   xmlbuilder: [ '15.1.1' ],
+96 silly audit   y18n: [ '5.0.8' ],
+96 silly audit   yargs: [ '17.7.2' ],
+96 silly audit   'yargs-parser': [ '21.1.1' ],
+96 silly audit   'yocto-queue': [ '0.1.0' ],
+96 silly audit   yauzl: [ '2.10.0' ],
+96 silly audit   'tiny-async-pool': [ '1.3.0' ],
+96 silly audit   '@develar/schema-utils': [ '2.6.5' ],
+96 silly audit   '@electron/asar': [ '3.4.1' ],
+96 silly audit   '@electron/fuses': [ '1.8.0' ],
+96 silly audit   '@electron/notarize': [ '2.5.0' ],
+96 silly audit   '@electron/osx-sign': [ '1.3.3' ],
+96 silly audit   '@electron/rebuild': [ '4.0.4' ],
+96 silly audit   '@electron/universal': [ '2.0.3' ],
+96 silly audit   '@electron/windows-sign': [ '1.2.2' ],
+96 silly audit   '@isaacs/fs-minipass': [ '4.0.1' ],
+96 silly audit   '@malept/cross-spawn-promise': [ '2.0.0' ],
+96 silly audit   '@malept/flatpak-bundler': [ '0.4.0' ],
+96 silly audit   '@sindresorhus/is': [ '4.6.0' ],
+96 silly audit   '@szmarczak/http-timer': [ '4.0.6' ],
+96 silly audit   '@types/cacheable-request': [ '6.0.3' ],
+96 silly audit   '@types/debug': [ '4.1.13' ],
+96 silly audit   '@types/fs-extra': [ '9.0.13' ],
+96 silly audit   '@types/http-cache-semantics': [ '4.2.0' ],
+96 silly audit   '@types/keyv': [ '3.1.4' ],
+96 silly audit   '@types/node': [ '22.19.19' ],
+96 silly audit   '@types/responselike': [ '1.0.3' ],
+96 silly audit   '@types/yauzl': [ '2.10.3' ],
+96 silly audit   '@xmldom/xmldom': [ '0.8.13' ],
+96 silly audit   retry: [ '0.12.0' ],
+96 silly audit   '@types/ms': [ '2.1.0' ],
+96 silly audit   'dmg-license': [ '1.0.11' ],
+96 silly audit   '@types/plist': [ '3.0.5' ],
+96 silly audit   '@types/verror': [ '1.10.11' ],
+96 silly audit   crc: [ '3.8.0' ],
+96 silly audit   'iconv-corefoundation': [ '1.1.7' ],
+96 silly audit   'smart-buffer': [ '4.2.0' ],
+96 silly audit   verror: [ '1.10.1' ],
+96 silly audit   buffer: [ '5.7.1' ],
+96 silly audit   ieee754: [ '1.2.1' ],
+96 silly audit   'cli-truncate': [ '2.1.0' ],
+96 silly audit   'node-addon-api': [ '1.7.2' ],
+96 silly audit   'slice-ansi': [ '3.0.0' ],
+96 silly audit   'astral-regex': [ '2.0.0' ],
+96 silly audit   'assert-plus': [ '1.0.0' ],
+96 silly audit   'core-util-is': [ '1.0.2' ],
+96 silly audit   extsprintf: [ '1.4.1' ]
+96 silly audit }
+97 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 434ms
+98 silly audit report {}
+99 verbose cwd C:\Users\USER\network tester
+100 verbose os Windows_NT 10.0.19045
+101 verbose node v24.14.1
+102 verbose npm  v11.14.1
+103 verbose exit 0
+104 info ok

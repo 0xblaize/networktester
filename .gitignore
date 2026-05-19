@@ -1,0 +1,33 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PHP
+vendor/
+composer.lock
+
+# Desktop app
+node_modules/
+dist/
+release/
+*.exe
+*.blockmap
+*.asar
+package-lock.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# System files
+Thumbs.db
+.DS_Store
+
+# Environment
+.env
+.env.local
