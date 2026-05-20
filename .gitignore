@@ -1,33 +1,17 @@
-# IDE and Editor files
+# Build outputs
+dist/
+!dist/
+dist/*
+!dist/NetworkTester.exe
+!dist/NetworkTesterSetup.exe
+
+# Local package/cache folders
+.npm-cache/
+node_modules/
+
+# Editor/system files
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# PHP
-vendor/
-composer.lock
-
-# Desktop app
-node_modules/
-dist/
-release/
-*.exe
-*.blockmap
-*.asar
-package-lock.json
-
-# Temporary files
+Thumbs.db
 *.tmp
 *.temp
-.cache
-
-# System files
-Thumbs.db
-.DS_Store
-
-# Environment
-.env
-.env.local

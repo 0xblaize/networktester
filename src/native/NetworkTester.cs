@@ -77,10 +77,13 @@ namespace NetworkTesterNative
             body.Dock = DockStyle.Fill;
             body.BackColor = Color.White;
             body.Padding = new Padding(28);
+            body.AutoScroll = true;
             root.Controls.Add(body, 0, 1);
 
             var layout = new TableLayoutPanel();
-            layout.Dock = DockStyle.Fill;
+            layout.Dock = DockStyle.Top;
+            layout.AutoSize = true;
+            layout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             layout.ColumnCount = 1;
             layout.RowCount = 7;
             layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 300));
@@ -88,8 +91,8 @@ namespace NetworkTesterNative
             layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 54));
             layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 58));
             layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 150));
-            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
-            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 26));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 92));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 42));
             body.Controls.Add(layout);
 
             var speedPanel = new Panel();
@@ -222,8 +225,9 @@ namespace NetworkTesterNative
             layout.Controls.Add(info, 0, 5);
 
             var footer = new Label();
-            footer.Text = "Network Tester";
+            footer.Text = "Built by Blaize";
             footer.ForeColor = Color.FromArgb(122, 135, 148);
+            footer.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             footer.TextAlign = ContentAlignment.MiddleCenter;
             footer.Dock = DockStyle.Fill;
             layout.Controls.Add(footer, 0, 6);
@@ -290,13 +294,13 @@ namespace NetworkTesterNative
 
                 SetProgress(20, "Testing real download speed...");
                 double download = await Task.Run(new Func<double>(MeasureDownload));
-                downloadResult.Text = download.ToString("0.00") + " Mbps";
-                UpdateMain(download, "Download Speed", "Mbps", download);
+                downloadResult.Text = FormatSpeed(download);
+                UpdateMainSpeed(download, "Download Speed");
 
                 SetProgress(62, "Testing real upload speed...");
                 double upload = await Task.Run(new Func<double>(MeasureUpload));
-                uploadResult.Text = upload.ToString("0.00") + " Mbps";
-                UpdateMain(upload, "Upload Speed", "Mbps", upload);
+                uploadResult.Text = FormatSpeed(upload);
+                UpdateMainSpeed(upload, "Upload Speed");
 
                 SetProgress(100, "Real internet speed test complete");
             }
@@ -363,7 +367,7 @@ namespace NetworkTesterNative
                     double current = BytesToMbps(totalBytes, totalWatch.Elapsed.TotalSeconds);
                     BeginInvoke(new Action(delegate
                     {
-                        UpdateMain(current, "Download Speed", "Mbps", current);
+                        UpdateMainSpeed(current, "Download Speed");
                         SetProgress(20 + Math.Min(40, (int)(totalWatch.ElapsedMilliseconds / 12000.0 * 40)), "Testing real download speed...");
                     }));
                 });
@@ -434,7 +438,7 @@ namespace NetworkTesterNative
                 double current = BytesToMbps(totalBytes, totalWatch.Elapsed.TotalSeconds);
                 BeginInvoke(new Action(delegate
                 {
-                    UpdateMain(current, "Upload Speed", "Mbps", current);
+                    UpdateMainSpeed(current, "Upload Speed");
                     SetProgress(62 + Math.Min(36, (int)(totalWatch.ElapsedMilliseconds / 10000.0 * 36)), "Testing real upload speed...");
                 }));
                 index++;
@@ -546,6 +550,15 @@ namespace NetworkTesterNative
             gauge.Value = gaugeValue;
         }
 
+        private void UpdateMainSpeed(double mbps, string label)
+        {
+            SpeedDisplay display = GetSpeedDisplay(mbps);
+            speedValue.Text = display.Value;
+            speedUnit.Text = display.Unit;
+            speedLabel.Text = label;
+            gauge.Value = mbps;
+        }
+
         private void SetProgress(int value, string text)
         {
             value = Math.Max(0, Math.Min(100, value));
@@ -579,6 +592,22 @@ namespace NetworkTesterNative
             if (bytes < 1024) return bytes + " B";
             if (bytes < 1024 * 1024) return (bytes / 1024.0).ToString("0.0") + " KB";
             return (bytes / 1024.0 / 1024.0).ToString("0.00") + " MB";
+        }
+
+        private static string FormatSpeed(double mbps)
+        {
+            SpeedDisplay display = GetSpeedDisplay(mbps);
+            return display.Value + " " + display.Unit;
+        }
+
+        private static SpeedDisplay GetSpeedDisplay(double mbps)
+        {
+            if (mbps > 0 && mbps < 1)
+            {
+                return new SpeedDisplay((mbps * 1024).ToString("0"), "Kbps");
+            }
+
+            return new SpeedDisplay(mbps >= 100 ? mbps.ToString("0") : mbps.ToString("0.00"), "Mbps");
         }
 
         [STAThread]
@@ -683,6 +712,18 @@ namespace NetworkTesterNative
             TotalTimeMs = totalTimeMs;
             FirstByteTimeMs = firstByteTimeMs;
             Bytes = bytes;
+        }
+    }
+
+    public class SpeedDisplay
+    {
+        public readonly string Value;
+        public readonly string Unit;
+
+        public SpeedDisplay(string value, string unit)
+        {
+            Value = value;
+            Unit = unit;
         }
     }
 }
