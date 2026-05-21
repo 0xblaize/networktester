@@ -8,6 +8,7 @@ dist/*
 # Local package/cache folders
 .npm-cache/
 node_modules/
+macos/build/
 
 # Editor/system files
 .vscode/

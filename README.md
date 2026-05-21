@@ -1,50 +1,46 @@
 # NetworkTester
 
-NetworkTester is a standalone Windows desktop application for testing real internet connection performance.
+NetworkTester is a standalone desktop application for testing real internet connection performance.
 
-It is built with C# WinForms and runs as a normal `.exe` application. The app measures download speed, upload speed, and ping using external Cloudflare speed test servers, then displays the results in a simple speedometer-style interface.
+The Windows version is built with C# WinForms and runs as a normal `.exe` application. A separate macOS version is included as a SwiftUI app that can be packaged into a `.dmg` installer on a Mac.
+
+The app measures download speed, upload speed, and ping using external Cloudflare speed test servers, then displays the results in a simple speedometer-style interface.
 
 ## Overview
 
 NetworkTester was built to make internet speed testing simple, visual, and easy to understand.
 
-Instead of opening a browser-based speed test website, users can launch NetworkTester directly from their Windows desktop and test their connection inside a clean desktop app window.
+Instead of opening a browser-based speed test website, users can launch NetworkTester directly from their desktop and test their connection inside a clean native app window.
 
 The goal is to provide a lightweight tool that helps users quickly understand how strong, weak, or unstable their internet connection is.
 
 ## Features
 
 - Standalone Windows `.exe` application
-- Built with C# WinForms
+- Windows installer generated as `NetworkTesterSetup.exe`
+- macOS SwiftUI version with `.dmg` build script
 - Real internet speed testing
 - Download speed test
 - Upload speed test
 - Ping test
+- Website response test
 - Speedometer-style user interface
 - Uses external Cloudflare speed test servers
-- Simple and beginner-friendly desktop experience
-- Displays low speeds below 1 Mbps in Kbps
-
-## Why I Built This
-
-Many users experience slow or unstable internet but do not always know what the issue is.
-
-Sometimes the connection is slow. Sometimes the ping is high. Sometimes upload speed is the real problem. Sometimes the network is connected but unstable.
-
-NetworkTester helps users check these basic network metrics from a simple Windows desktop app.
+- Displays speeds below 1 Mbps in Kbps
+- Simple desktop experience
 
 ## Tech Stack
 
 - C#
 - WinForms
 - .NET Framework
+- Swift
+- SwiftUI
 - Cloudflare speed test endpoints
 
 ## How It Works
 
-NetworkTester runs as a desktop application on Windows.
-
-When the user starts a test, the app connects to external Cloudflare speed test servers and measures:
+When the user starts a test, NetworkTester connects to external Cloudflare speed test servers and measures:
 
 - Download speed by fetching test data
 - Upload speed by sending test data
@@ -52,37 +48,66 @@ When the user starts a test, the app connects to external Cloudflare speed test 
 
 The results are displayed inside the app through a visual speedometer-style interface.
 
-## Getting Started
+## Windows
 
-### Option 1: Install The App
+### Build The Windows App
 
-Build the installer:
+Run this from the project root:
 
 ```bat
-build-installer.bat
+build-native.bat
 ```
 
-Then open:
-
-```text
-dist\NetworkTesterSetup.exe
-```
-
-The installer copies NetworkTester to your Windows user app folder and creates Desktop and Start Menu shortcuts.
-
-The installer is built directly with C# and does not use IExpress. The build scripts use the project folder as their root, so they do not depend on a specific user path like `C:\Users\USER\...`.
-
-### Option 2: Run The App Directly
-
-Open the executable file:
+Output:
 
 ```text
 dist\NetworkTester.exe
 ```
 
-Double-click the file to launch the app.
+### Build The Windows Installer
 
-### Option 3: Build From Source
+Run this from the project root:
+
+```bat
+build-installer.bat
+```
+
+Output:
+
+```text
+dist\NetworkTesterSetup.exe
+```
+
+Double-click `NetworkTesterSetup.exe` to install the app. The installer copies NetworkTester to the current user's Windows app folder and creates Desktop and Start Menu shortcuts.
+
+The build scripts use the project folder as their root, so they do not depend on a specific path like `C:\Users\USER\...`.
+
+## macOS DMG
+
+The macOS `.dmg` must be built on a Mac. Windows cannot build a real macOS `.dmg` app because it needs Apple's SwiftUI, Xcode tools, and `hdiutil`.
+
+On a Mac, install Xcode Command Line Tools:
+
+```bash
+xcode-select --install
+```
+
+Then run this from the project root:
+
+```bash
+chmod +x macos/build-dmg.sh
+./macos/build-dmg.sh
+```
+
+Output:
+
+```text
+dist/NetworkTester.dmg
+```
+
+Open the DMG on macOS, then drag `NetworkTester.app` into Applications.
+
+## Run From Source
 
 Clone the repository:
 
@@ -90,38 +115,44 @@ Clone the repository:
 git clone https://github.com/0xblaize/networktester.git
 ```
 
-Build the native Windows app:
+Build the Windows app on Windows:
 
 ```bat
 build-native.bat
 ```
 
-After building, run:
+Build the macOS DMG on macOS:
 
-```text
-dist\NetworkTester.exe
+```bash
+chmod +x macos/build-dmg.sh
+./macos/build-dmg.sh
 ```
 
 ## Project Structure
 
 ```text
 network tester/
-├── build-native.bat
-├── build-installer.bat
-├── dist/
-│   ├── NetworkTester.exe
-│   └── NetworkTesterSetup.exe
-└── src/
-    └── native/
-        ├── Installer.cs
-        └── NetworkTester.cs
++-- build-native.bat
++-- build-installer.bat
++-- dist/
+|   +-- NetworkTester.exe
+|   +-- NetworkTesterSetup.exe
+|   +-- NetworkTester.dmg
++-- macos/
+|   +-- Info.plist
+|   +-- NetworkTesterMac.swift
+|   +-- build-dmg.sh
++-- src/
+    +-- native/
+        +-- Installer.cs
+        +-- NetworkTester.cs
 ```
 
 ## Project Status
 
 NetworkTester is currently in active development.
 
-The core version can test download speed, upload speed, and ping from a standalone Windows desktop app.
+The core version can test download speed, upload speed, ping, and website response from a standalone desktop app.
 
 ## Planned Improvements
 
@@ -129,10 +160,9 @@ The core version can test download speed, upload speed, and ping from a standalo
 - Add better error handling for poor connections
 - Add a network stability score
 - Add result history
-- Add dark mode
-- Add Windows installer support
 - Improve the speedometer animation
 - Add more detailed connection reports
+- Add signed release builds
 
 ## Use Cases
 
@@ -142,7 +172,8 @@ NetworkTester can be useful for:
 - Testing unstable Wi-Fi connections
 - Confirming download and upload performance
 - Checking ping before online meetings, gaming, or streaming
-- Learning how desktop network tools work in C#
+- Testing if a website is reachable and how fast it responds
+- Learning how desktop network tools work
 
 ## Author
 
